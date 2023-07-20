@@ -1,10 +1,10 @@
-# TODO 1: Get Morse code Alphabets, Numbers and Characters
+# creating a morse data file from morse csv
 with open("morse.csv") as morse_data_file:
     morse_data = {s.split(',')[0]: s.split(',')[1].strip('\n') + " " for s in morse_data_file.readlines()}
     morse_data[','] = '__..__ '
 
 
-# TODO 2: Create function that converts text to morse code
+# Converting text to morse code
 def text_to_morse_converter(text: str):
     morse_code = ""
     for a in text.upper():
@@ -12,6 +12,7 @@ def text_to_morse_converter(text: str):
     return morse_code
 
 
+#  Program intro setup
 print("Hi! Welcome to text to morse code converter.\nTo get started, enter the text you wish to convert below(Note: "
       "Underscore character (_) is not accepted).")
 input_text = input("Text: ")
